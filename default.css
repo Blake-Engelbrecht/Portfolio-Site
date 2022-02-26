@@ -1,0 +1,326 @@
+:root {
+    /* Nord Color Theme (nordtheme.com) */
+
+    /* Dark Colors (darkest to lightest) */
+    --nordDark01: #2E3440; 
+    --nordDark02: #3B4252;
+    --nordDark03: #434C5E;
+    --nordDark04: #4C566A;
+
+    /* Light Colors (darkest to lightest) */
+    --nordLight01: #D8DEE9;
+    --nordLight02: #E5E9F0;
+    --nordLight03: #ECEFF4;
+
+    /* Frost Colors */
+    --nordSeafoam: #8FBCBB;
+    --nordAqua: #88C0D0;
+    --nordIndigo: #81A1C1;
+    --nordBlue: #5E81AC;
+
+    /* Aurora Colors */
+    --nordRed: #BF616A;
+    --nordOrange: #D08770;
+    --nordYellow: #EBCB8B;
+    --nordGreen: #A3BE8C;
+    --nordPurple: #B48EAD;
+
+    --borderColor: var(--nordDark04);
+    --themeDotBorder: var(--nordDark01);
+    --previewShadow: var(--nordSeafoam);
+
+}
+
+/* Styling */
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Space Mono', monospace;
+
+    min-width: 450px;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+    color: var(--nordDark01);
+    font-weight: 800;
+}
+
+p, li, span, label, input, text {
+    color: var(--nordDark04);
+}
+
+a {
+    text-decoration: none;
+    color: var(--nordBlue);
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+}
+
+h1 { font-size: 56px;}
+h2 { font-size: 36px;}
+h3 { font-size: 28px;}
+h4 { font-size: 24px;}
+h5 { font-size: 20px;}
+h6 { font-size: 16px;}
+
+.section-1 {
+    background-color: var(--nordLight01);
+    border-bottom: 1px solid var(--borderColor);
+    overflow: auto;
+    padding-bottom: 50px;
+}
+
+.section-2 {
+    background-color: var(--nordLight03);
+    border-bottom: 1px solid var(--borderColor);
+    overflow: auto;
+}
+
+.main-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.greeting-wrapper {
+    display: grid;
+    text-align: center;
+    align-content: center;
+    min-height: 10em;
+
+}
+
+.intro-wrapper {
+    background-color: var(--nordLight03);
+    border: 1px solid var(--borderColor);
+    border-radius: 5px 5px 0 0;
+
+    -webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,.75);
+    -moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,.75);
+    box-shadow: -1px 1px 3px -1px rgba(0,0,0,.75);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        'nav-wrapper nav-wrapper'
+        'left-col right-col';
+}
+
+.nav-wrapper { 
+    grid-area: nav-wrapper;
+    border-bottom: 1px solid var(--borderColor);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--nordLight01);    
+    border-radius: 5px 5px 0 0;
+
+    background: rgb(94,129,172);
+    background: linear-gradient(90deg, rgba(94,129,172,1) 0%, rgba(129,161,193,1) 51%, rgba(136,192,208,1) 100%);
+}
+
+#navigation {
+    margin: 0;
+    padding: 10px;
+}
+
+#navigation li {
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.dots-wrapper {
+    display: flex;
+    padding: 10px;
+}
+
+.browser-dot {
+    background-color: black;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    margin: 5px;
+
+    -webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,.75);
+    -moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,.75);
+    box-shadow: -1px 1px 3px -1px rgba(0,0,0,.75);
+}
+
+#dot-1 {
+    background-color: var(--nordRed);
+}
+
+#dot-2 {
+    background-color: var(--nordYellow);
+}
+
+#dot-3 {
+    background-color: var(--nordGreen);
+}
+
+.left-col { 
+    grid-area: left-col;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#profile-pic {
+    display: block;    
+    margin: 0 auto;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+
+#theme-text {
+    text-align: center;
+    line-height: 0;
+}
+
+.theme-dot {
+    height: 30px;
+    width: 30px;
+    background-color: var(--nordDark01);
+    
+
+    margin: 5px;
+    border: 2px solid var(--themeDotBorder);
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    -webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,.75);
+    -moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,.75);
+    box-shadow: -1px 1px 3px -1px rgba(0,0,0,.75);
+}
+
+.theme-dot:hover {
+    border-width: 5px;
+}
+
+.theme-options-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+#light-mode {
+    background-color: var(--nordLight01);
+}
+
+#dark-mode {
+    background-color: var(--nordDark01);
+}
+
+#settings-note {
+    font-size: 12px;
+    font-style: italic;
+    text-align: center;
+    font-weight: bold;
+}
+
+.right-col { 
+    grid-area: right-col;
+    display: grid;
+    align-content: center;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#preview-shadow {
+    width: 300px;
+    height: 180px;
+    padding-left: 30px;
+    padding-top: 30px;
+    background: rgb(143,188,187);
+    background: linear-gradient(80deg, rgba(143,188,187,1) 0%, rgba(136,192,208,1) 50%, rgba(143,188,187,1) 100%);
+
+}
+#preview {
+    width: 300px;
+    min-height: 180px;
+    border: 1.5px solid var(--nordIndigo);
+    background-color: rgba(216, 222, 233, .8);
+    padding: 15px;
+    position: relative;
+}
+
+.corner {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    border: 1.5px solid var(--nordIndigo);
+    background-color: var(--nordLight01);
+    position: absolute;
+}
+
+#corner-tl {
+    top: -5px;
+    left: -5px;
+}
+
+#corner-tr {
+    top: -5px;
+    right: -5px;
+}
+
+#corner-bl {
+    bottom: -5px;
+    left: -5px;
+}
+
+#corner-br {
+    bottom: -5px;
+    right: -5px;
+}
+
+.about-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#skills {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--previewShadow);
+}
+
+.social-links {
+    display: grid;
+    align-content: center;
+    text-align: center;
+
+}
+
+#social-img {
+    width: 100%;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .main-container {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .intro-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            'nav-wrapper'
+            'left-col'
+            'right-col';
+    }
+
+    .right-col {
+        justify-content: center;
+    }
+}
